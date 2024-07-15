@@ -9,3 +9,6 @@ Viết 1 module nesjs + postgresql thực hiện việc confirm OTP khi người
    - Đơn giá
    - Số lượng
    - Tổng tiền
+
+Chạy docker compose cài postgresql:
+docker-compose up -d
