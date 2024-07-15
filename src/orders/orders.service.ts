@@ -4,13 +4,13 @@ import { handleError } from 'src/utils/error-handler.util';
 import { Repository } from 'typeorm';
 import { OtpService } from '../otp/otp.service';
 import { CreateOrderDto } from './dto/orders.dto';
-import { Order } from './entity/order.entity';
+import { Orders } from './entity/orders.entity';
 
 @Injectable()
 export class OrdersService {
   constructor(
-    @InjectRepository(Order)
-    private ordersRepository: Repository<Order>,
+    @InjectRepository(Orders)
+    private ordersRepository: Repository<Orders>,
     private otpService: OtpService,
   ) {}
 

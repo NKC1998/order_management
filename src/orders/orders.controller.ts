@@ -7,7 +7,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { CreateOrderDto } from './dto/orders.dto';
-import { Order } from './entity/order.entity';
+import { Orders } from './entity/orders.entity';
 import { OrdersService } from './orders.service';
 
 @Controller('orders')
@@ -21,7 +21,7 @@ export class OrdersController {
 
   @Post('create')
   @UsePipes(new ValidationPipe({ transform: true }))
-  async createOrder(@Body() data: CreateOrderDto): Promise<Order> {
+  async createOrder(@Body() data: CreateOrderDto): Promise<Orders> {
     return this.ordersService.createOrder(data);
   }
 }
